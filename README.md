@@ -2,7 +2,7 @@
 
 1. `npm install`  
 2. `gulp`
-3. `node server.js`  
+3. `npm start`  
 4. visit <http://localhost:3000/>
 
 ## Changing the port
