@@ -114,7 +114,6 @@ var IssueBoard = React.createClass({
       selectedFilters: [],
       currentSearchTerm: e.target.value.toLowerCase()
     });
-
     var updatedList = this.state.initialIssues;
     updatedList = updatedList.filter(function(issue){
       var issueString = JSON.stringify(issue);
@@ -161,18 +160,17 @@ var IssueBoard = React.createClass({
     if (e.target.className.indexOf("param-button") == -1) return
 
     var selectedFilters = this.state.selectedFilters.slice();
-    var updatedList = this.state.initialIssues;
+    var initialIssues = this.state.initialIssues;
     var newList = [];
     var flag = false;
 
     // if already present, remove
     if (selectedFilters.indexOf(e.target.innerHTML) > -1) {
       selectedFilters.splice(selectedFilters.indexOf(e.target.innerHTML), 1);
-
       if (selectedFilters.length == 0) {
         this.setState({selectedIssues: this.state.initialIssues});
       } else {
-          updatedList.map(function(issue){
+          initialIssues.map(function(issue){
             flag = false;
             var issueString = JSON.stringify(issue);
             for (var key in selectedFilters) {
@@ -187,11 +185,10 @@ var IssueBoard = React.createClass({
           });
           this.setState({selectedIssues: newList});
       }
-    }
-    else {
+    } else {
       selectedFilters.push(e.target.innerHTML);
       if (selectedFilters.length == 1) {
-        updatedList.map(function(issue){
+        initialIssues.map(function(issue){
           flag = false;
           var issueString = JSON.stringify(issue);
           for (var key in selectedFilters) {
@@ -204,7 +201,7 @@ var IssueBoard = React.createClass({
         this.setState({selectedIssues: newList});
       } else {
         flag = false;
-        updatedList.map(function(issue){
+        initialIssues.map(function(issue){
           flag = false;
           var issueString = JSON.stringify(issue);
           for (var key in selectedFilters) {
