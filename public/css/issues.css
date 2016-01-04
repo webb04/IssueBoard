@@ -1,0 +1,333 @@
+body {
+  background-color: #fafafa;
+  margin: 0px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.full-screen {
+  font-family: 'HelveticaNeue1', 'Helvetica', sans-serif;
+}
+
+.issue-card-wrapper {
+  width: 25%;
+  display: inline-block;
+}
+
+.issue-card {
+  margin: 15px;
+  border: solid 1px #DEDEDE;
+  border-bottom: solid 3px #DEDEDE;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  background-color: white;
+}
+
+.card-title {
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 50px;
+  color: #1072a7;
+}
+
+.card-assignee {
+  text-align: left;
+  font-size: 12px;
+}
+
+.card-description {
+  color: #AFAEAE;
+  text-align: left;
+  font-size: 14px;
+}
+
+.card-footer {
+  width: 100%;
+  border-top: 1px solid #DEDEDE;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+.card-footer p {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 0px;
+}
+
+.assignee-wrapper {
+  width: 100%;
+}
+
+.user-icon {
+  height: 12px;
+  display: inline-block;
+  text-align: left;
+  float: left;
+}
+
+.filter-attribute-title {
+  font-weight: 200;
+  margin-bottom: 5px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.issue-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.completed-button {
+  padding: 5px 20px;
+  border: solid 1px #2acc72;
+  color: #2acc72;
+  border-radius: 2px;
+  display: none;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.clear-button {
+  border: solid 1px #f15d64;
+  color: #f15d64;
+  border-radius: 2px;
+  padding: 6px 19px;
+  background-color: #FFF;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+ /*
+ On :hover of div show button
+ functionality to set issue to being complete
+ */
+
+/*
+.issue-overlay:hover .completed-button {
+   display: block;
+   cursor:pointer;
+   transition:display 0.25s;
+}
+
+.issue-overlay:hover {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+*/
+
+.filter-params {
+  vertical-align: middle;
+  position: relative;
+}
+
+.param-button {
+  padding: 6px 19px;
+  color: #414042;
+  font-size: 13px;
+  line-height: normal;
+  border-style: solid;
+  border-width: 1px 1px 1px;
+  border-color: #DEDEDE;
+  border-radius: 2px;
+  background-color: #FFF;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: solid 1px #DEDEDE;
+  transition:border 0.75s;
+  width: 25%;
+  -webkit-appearance: none;
+  vertical-align: top;
+}
+
+input[type="text"]:focus {
+  border: solid 1px black;;
+  outline: 0;
+}
+
+.filter-list img {
+  margin-right: 5px;
+}
+
+.filter-list-search img {
+  height: 35px;
+  margin-right: 20px;
+}
+
+.filter-list-search {
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+  padding: 30px;
+  vertical-align: top;
+}
+
+.filter-list-item {
+  float:left;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.attribute-row {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0px 30px;
+}
+
+.filter-button {
+  padding: 6px 19px;
+  color: #414042;
+  line-height: 21px;
+  border-style: solid;
+  border-width: 1px 1px 1px;
+  border-color: #DEDEDE;
+  border-radius: 2px;
+  background-color: #FFF;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 5px;
+  height: 21px;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
+.attribute-row-left {
+  width: 50%;
+}
+
+.attribute-row-right {
+  width: 50%;
+}
+
+.issues-wrapper {
+  padding: 0px 30px 30px 30px;
+}
+
+.checkbox, .checkbox-text, .label-checkbox {
+  display: inline-block;
+}
+.checkbox-text {
+  margin-right: 5px;
+}
+
+.filter-attribute-wrapper {
+  padding-bottom: 30px;
+  background: white;
+}
+
+.selected {
+  border: solid 1px #2acc72;
+  color: #2acc72;
+  border-radius: 2px;
+}
+
+@media screen and (min-width: 767px) {
+  .issue-card-wrapper {
+    width: 33.33333%;
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .issue-card-wrapper {
+    width: 25%;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .issue-card-wrapper {
+    width: 50%;
+    display: inline-block;
+  }
+
+  input[type="text"] {
+    width:50%;
+    -webkit-appearance: none;
+    margin-top: 0px;
+  }
+}
+
+
+@media only screen and (max-width: 560px) {
+  .issue-card-wrapper {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .attribute-row {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .param-button {
+    width: 75%;
+    font-size: normal;
+    margin-right: 0px;
+    padding: 10px 19px;
+  }
+
+  .filter-params {
+    text-align: center;
+    padding-left: 0px;
+  }
+
+  input[type="text"] {
+    width:40%;
+    -webkit-appearance: none;
+    border-radius: 2px;
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-device-width : 480px) {
+  .filter-list-search img {
+    margin-right: 10px;
+  }
+
+  .filter-button {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+}
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=47bd1f5b-5eeb-4c84-a930-3dbbdf77bfa7");
+@font-face{
+  font-family:"HelveticaNeue";
+  src:url("Fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix");
+  src:url("Fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix") format("eot"),url("Fonts/aff68211-86bb-476d-882e-f7a3face144c.woff2") format("woff2"),url("Fonts/50d35bbc-dfd4-48f1-af16-cf058f69421d.woff") format("woff"),url("Fonts/278bef59-6be1-4800-b5ac-1f769ab47430.ttf") format("truetype"),url("Fonts/2e309b1b-08b8-477f-bc9e-7067cf0af0b3.svg#2e309b1b-08b8-477f-bc9e-7067cf0af0b3") format("svg");
+}
